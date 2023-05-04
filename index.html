@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark"><!--(navbar-expand-lg) el menu se expanda de un tamaño largo en adelante-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a href="#" class="navbar-brand">Logotipo</a><!--Aqui va la marca o el logotipo del navbar-->
                 <button
@@ -24,11 +24,11 @@
                     <span class="navbar-toggler-icon"></span> <!--Se le agrega el icono al Menu de navegacion-->
                 </button>
 
-                <div class="collapse navbar-collapse" id="contenidoMenu"><!--Se cren los items del menu de navegacion con el id enlazado al boton collapzandolo desde el inicio-->
+                <div class="collapse navbar-collapse" id="contenidoMenu">
                     <!--Enlaces/items navbar-->
-                    <ul class="navbar-nav me-auto"><!--Creamos el navbar y le damos un margen automatico a la derecha para que este queda pegado a la izquierda-->
-                        <li class="nav-item"><!--Agregamos un item al menu-->
-                            <a href="#" class="nav-link">Inicio</a><!--(nav-link) para espcificarle a bootstrap que es un link de navegacion-->
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Inicio</a>
                         </li>
 
                         <!--DropDown-->
@@ -40,9 +40,9 @@
                                 role="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
-                            ><!--Se crea el dropdown con clases-->
+                            >
                                 Productos
-                            </a><!--(nav-link) para espcificarle a bootstrap que es un link de navegacion-->
+                            </a>
 
                             <!--sub Elementos-->
                             <ul class="dropdown-menu" aria-labelledby="submenuProductos"><!--Creamos el submenu del item Productos del menu-->
@@ -54,26 +54,25 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Contacto</a><!--(nav-link) para espcificarle a bootstrap que es un link de navegacion-->
+                            <a href="#" class="nav-link">Contacto</a>
                         </li>
                     </ul>
 
                     <!-- Formulario de busqueda -->
                     <form action="" class="d-flex">
                         <input type="text" class="form-control" aria-label="Buscar" placeholder="Buscar..."><!--Se crea el input para ingresar la busqueda-->
-                        <button class="btn btn-primary" type="submit">Buscar</button><!--Se crea el boton submit para evniar la busqueda-->
+                        <button class="btn btn-primary" type="submit">Buscar</button>
                     </form>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="container"><!--Se crea el contenedor de bootstrap-->
+    <main class="container">
         <!-- Carousel -->
-        <div class="row"><!--Se crea la fila del carousel-->
-            <div class="col"><!--Se crea la columna que abarcaremos-->
+        <div class="row">
+            <div class="col">
                 <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
-                    <!--(carousel)Se crea el carousel | (slide)transicion | (data-bs-ride)Se habilita que corra el carousel-->
                     <div class="carousel-inner"><!--Se crea el contenedor de las imagenes internas-->
                         <div class="carousel-item active"><!--Se le da la clase de item y (active) para que este activo una vez la pagina se inicie-->
                             <img src="img/s1.jpg" class="w-100" alt="">
@@ -87,36 +86,27 @@
                     </div>
 
                     <!-- Controles de anterior y siguiente -->
-                    <!--
-                        (data-bs-target)Enlaza el id del carousel
-                        (data-bs-slide)Indica hacia donde se movera al ser clickeado (prev)anterior, (next)siguiente
-                    -->
                     <button 
                         class="carousel-control-prev" 
                         type="button"
                         data-bs-target="#slideshow"    
                         data-bs-slide="prev"
                     ><!--Se crea el boton para la imagen previa-->
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span><!--Se le da el icono al boton previo y lo ocultamos para los dispositivos de ayuda-->
-                        <span class="visually-hidden">Anterior</span><!--ocultamos esto en pantalla y lo dejamos visible solamente para los dispositov sde ayuda-->
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
                     </button>
                     <button 
                         class="carousel-control-next" 
                         type="button"
                         data-bs-target="#slideshow"    
                         data-bs-slide="next"
-                    ><!--Se crea el boton para la imagen siguiente-->
+                    >
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Siguiente</span>
                     </button>
 
                     <!-- Indicadores -->
-                    <div class="carousel-indicators"><!--Se crea el contenedor de los indicadores del carousel-->
-                        <!--
-                            (data-bs-slide-to) indica la posicion en la que esta en el momento
-                            (aria-current="true")Indica en el lugar en el que esta a los dispositivos de asistenica
-                            (aria-label)Indica en donde esta para los dispositivos de asistencia
-                        -->
+                    <div class="carousel-indicators">
                         <button
                             type="button"
                             data-bs-target="#slideshow"
@@ -124,7 +114,7 @@
                             class="active"
                             aria-current="true"
                             aria-label="Slide #1"
-                        ></button><!--Se crea el boton de indicador-->
+                        ></button>
                         <button
                             type="button"
                             data-bs-target="#slideshow"
@@ -145,23 +135,23 @@
         </div>
 
         <!-- Titulo Galeria -->
-        <div class="row py-5"><!--Se crea la fila donde ira el titulo de la galeria-->
-            <div class="col"><!--Se crea la columna que abaracara el titulo de la galeria-->
-                <div class="border-bottom"> <!--este borde de abajo es solo para poner un separador-->
-                    <h1 class="text-center">Galeria</h1><!--Se le agrega el titulo-->
+        <div class="row py-5">
+            <div class="col">
+                <div class="border-bottom"> 
+                    <h1 class="text-center">Galeria</h1>
                 </div>
             </div>
         </div>
         <!-- Galeria -->
-        <div class="row"><!--Se agrega la fila donde iran todas las cards de los productos-->
-            <div class="col-12 col-sm-6 col-lg-3"><!--Se crea la card del producto con su respectivo responsive-->
-                <div class="card"><!--Se crea el contenedor de la card-->
-                    <img  class="card-img-top" src="img/1.jpg" alt="Texto en caso de que la imagen no apareciera"><!--(card-img-top) se alinea la imagen con el top de su contenedor-->
-                    <div class="card-body"><!--Se crea el cuerpo de la card-->
-                        <h3 class="card-title">iPhone</h3><!--Se le da un tittle a la card-->
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p><!--Se le da el contenido de la card  en este caso un: (p)-->
-                        <a href="#" class="btn btn-sm btn-primary">Comprar</a><!--Se le agrega un enlace con el estilo de boton de bootstrap-->
-                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a><!--Se le agrega otro boton con el estilo de boton de bootstrap-->
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card">
+                    <img  class="card-img-top" src="img/1.jpg" alt="Texto en caso de que la imagen no apareciera">
+                    <div class="card-body">
+                        <h3 class="card-title">iPhone</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-sm btn-primary">Comprar</a>
+                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
                     </div>
                 </div>
             </div>
