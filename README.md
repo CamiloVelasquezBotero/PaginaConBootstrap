@@ -2,4 +2,4 @@
 
 Esta pagina simula una tienda virtual hecha con Bootstrap
 
-Preview: https://tiendatecnologiabootstrap.netlify.app/
+Preview: https://tienda-virtual-bootstrap.vercel.app/ 
